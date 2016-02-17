@@ -1,0 +1,4 @@
+---
+
+- homebrew: name=zsh state=present update_homebrew=yes
+
