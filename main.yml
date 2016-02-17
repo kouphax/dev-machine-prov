@@ -5,6 +5,7 @@
     - homebrew: name={{ item }} state=present update_homebrew=yes
       with_items:
       - git
+      - vim
       - zsh
 
     - homebrew_cask: name={{ item }} state=present
