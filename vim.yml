@@ -1,7 +1,0 @@
----
-- hosts: localhost
-  connection: local
-  tasks:
-    - name: Upgrade pip
-      command: pip install --upgrade pip
-
