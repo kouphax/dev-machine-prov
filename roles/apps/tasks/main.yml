@@ -4,14 +4,18 @@
   with_items:
   - bettertouchtool
   - caffeine
-  - evernote
-  - firefox
   - flux
+
   - google-chrome
+  - firefox
+
+  - virtualbox
+  - vagrant
+
+  - evernote
   - sketch
   - skype
   - slack
   - spotify
-  - virtualbox
-  - vagrant
+  - pocket
 
