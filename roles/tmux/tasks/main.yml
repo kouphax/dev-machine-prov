@@ -2,3 +2,17 @@
 
 - homebrew: name=tmux state=present update_homebrew=yes
 
+- name: Tmux config file
+  template: src=tmux.conf dest=~/.tmux.conf
+  register: tmux_conf_loaded
+
+- block:
+  - name: Source tmux config file
+    shell: tmux source-file ~/.tmux.conf
+
+  - name: Install tmux plugins
+    shell: ~/.tmux/plugins/tpm/bin/install_plugins
+
+  - name: Update tmux plugins
+    shell: ~/.tmux/plugins/tpm/bin/update_plugins all
+  when: tmux_conf_loaded.changed
