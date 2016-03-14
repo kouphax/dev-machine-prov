@@ -6,6 +6,10 @@
   template: src=tmux.conf dest=~/.tmux.conf
   register: tmux_conf_loaded
 
+- name: Install tmux package manager
+  git: repo=https://github.com/tmux-plugins/tpm
+       dest=~/.tmux/plugins/tpm
+
 - block:
   - name: Source tmux config file
     shell: tmux source-file ~/.tmux.conf
