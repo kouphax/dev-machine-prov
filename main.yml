@@ -4,6 +4,6 @@
   roles:
   - apps
   - git
+  - tmux
   - vim
   - zsh
-  - tmux
