@@ -3,10 +3,10 @@
 - homebrew: name=tmux state=present update_homebrew=yes
 
 - name: Tmux config file
-  template: src=tmux.conf dest=~/.tmux.conf
+  template: src=tmux.conf dest=~/.tmux.conf force=yes
   register: tmux_conf_loaded
 
-- name: Install tmux package manager
+- name: Install tmux plugin manager
   git: repo=https://github.com/tmux-plugins/tpm
        dest=~/.tmux/plugins/tpm
 
