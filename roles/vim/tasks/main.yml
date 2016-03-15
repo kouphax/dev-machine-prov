@@ -18,7 +18,7 @@
   file: path=~/.vim/ftlplugin/ state=directory mode=0755
 
 - name: Copy ftplugin files
-  copy: src=ftplugin/{{ item }} dest=~/.vim/ftlplugin/{{ item }}force=yes
+  copy: src=ftplugin/{{ item }} dest=~/.vim/ftlplugin/{{ item }} force=yes
   with_items:
     - javascript.vim
     - yaml.vim
