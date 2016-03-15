@@ -7,7 +7,7 @@
        dest=~/.vim/bundle/Vundle.vim
 
 - name: Vimrc file
-  template: src=vimrc dest=~/.vimrc force=yes
+  copy: src=vimrc dest=~/.vimrc force=yes
   register: vimrc_loaded
 
 - name: Install vim plugins
@@ -18,7 +18,7 @@
   file: path=~/.vim/ftlplugin/ state=directory mode=0755
 
 - name: Copy ftplugin files
-  template: src=ftplugin/javascript.vim dest=~/.vim/ftlplugin/javascript.vim force=yes
+  copy: src=ftplugin/{{ item }} dest=~/.vim/ftlplugin/{{ item }}force=yes
   with_items:
     - javascript.vim
     - yaml.vim
