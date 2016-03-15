@@ -1,0 +1,61 @@
+"
+" Load plugins
+"
+
+" Allow vim to break compatibility with vi
+set nocompatible " This must be first, because it changes other options
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+" Let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'scrooloose/nerdtree'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+
+"
+" User settings
+"
+
+set encoding=utf-8      " The encoding displayed.
+
+let mapleader="\<Space>"       " Leader key is comma
+
+set clipboard=unnamed   " Use system clipboard
+
+set showcmd             " Show command down at the bottom
+set showmode            " Show current mode down at the bottom
+
+set relativenumber      " Display relative line numbers
+set number              " Display line numbers
+
+set tabstop=4           " Number of visual spaces per TAB
+set softtabstop=4       " Number of spaces in tab when editing
+set expandtab           " Tabs are spaces
+set shiftwidth=4        " Number of columns for text indentation
+
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+set showmatch           " Highlight matching [{()}]
+
+set incsearch           " Activate incremental search
+set hlsearch            " Activate search hilighting
+
+set history=3000        " Extends the remembered commands
+
+
+"
+" Plugin settings
+"
+
+map <Leader>n :NERDTreeToggle<CR>

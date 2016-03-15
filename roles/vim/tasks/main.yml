@@ -2,3 +2,23 @@
 
 - homebrew: name=vim state=present update_homebrew=yes
 
+- name: Install vundle plugin manager
+  git: repo=https://github.com/VundleVim/Vundle.vim.git
+       dest=~/.vim/bundle/Vundle.vim
+
+- name: Vimrc file
+  template: src=vimrc dest=~/.vimrc force=yes
+  register: vimrc_loaded
+
+- name: Install vim plugins
+  shell: vim +PluginInstall +qall
+  when: vimrc_loaded.changed
+
+- name: Create ftplugin directory
+  file: path=~/.vim/ftlplugin/ state=directory mode=0755
+
+- name: Copy ftplugin files
+  template: src=ftplugin/javascript.vim dest=~/.vim/ftlplugin/javascript.vim force=yes
+  with_items:
+    - javascript.vim
+    - yaml.vim
