@@ -18,6 +18,8 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'bronson/vim-trailing-whitespace'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -59,3 +61,5 @@ set history=3000        " Extends the remembered commands
 "
 
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>w :FixWhitespace<CR>
+
