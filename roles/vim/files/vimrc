@@ -32,32 +32,33 @@ call vundle#end()            " required
 " User settings
 "
 
-set encoding=utf-8      " The encoding displayed.
+set encoding=utf-8              " The encoding displayed.
+syntax on                       " Syntax highlighting
 
-let mapleader="\<Space>"       " Leader key is comma
+let mapleader="\<Space>"        " Leader key is comma
 
-set clipboard=unnamed   " Use system clipboard
+set clipboard=unnamed           " Use system clipboard
 
-set showcmd             " Show command down at the bottom
-set showmode            " Show current mode down at the bottom
+set showcmd                     " Show command down at the bottom
+set showmode                    " Show current mode down at the bottom
 
-set relativenumber      " Display relative line numbers
-set number              " Display line numbers
+set relativenumber              " Display relative line numbers
+set number                      " Display line numbers
 
-set tabstop=4           " Number of visual spaces per TAB
-set softtabstop=4       " Number of spaces in tab when editing
-set expandtab           " Tabs are spaces
-set shiftwidth=4        " Number of columns for text indentation
+set tabstop=4                   " Number of visual spaces per TAB
+set softtabstop=4               " Number of spaces in tab when editing
+set expandtab                   " Tabs are spaces
+set shiftwidth=4                " Number of columns for text indentation
 
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
-set showmatch           " Highlight matching [{()}]
+set showmatch                   " Highlight matching [{()}]
 
-set incsearch           " Activate incremental search
-set hlsearch            " Activate search hilighting
+set incsearch                   " Activate incremental search
+set hlsearch                    " Activate search hilighting
 
-set history=3000        " Extends the remembered commands
+set history=3000                " Extends the remembered commands
 
 
 "
