@@ -27,9 +27,11 @@ Plugin 'mattn/emmet-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 
 " All of your Plugins must be added before the following line
-call vundle#end()       " required
+call vundle#end()           " required
 
-filetype on             " Reactivate file type detection
+set autoindent
+filetype plugin indent on   " Reactivate file type detection
+
 
 "
 " User settings
