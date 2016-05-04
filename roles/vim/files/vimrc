@@ -53,9 +53,6 @@ set softtabstop=4               " Number of spaces in tab when editing
 set expandtab                   " Tabs are spaces
 set shiftwidth=4                " Number of columns for text indentation
 
-nmap <leader>l :set list!<CR>   " Show tabs characters and EOL characters
-set listchars=tab:▸\ ,eol:      " The characters to be displayed instead of tab and EOL
-
 set showmatch                   " Highlight matching [{()}]
 
 set incsearch                   " Activate incremental search
