@@ -5,6 +5,7 @@
 - name: Get current shell
   shell: echo $SHELL
   register: shell_used
+  changed_when: False
 
 - block:
   - name: Get username
