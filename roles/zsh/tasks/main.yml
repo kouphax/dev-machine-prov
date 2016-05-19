@@ -16,3 +16,11 @@
     user: name={{ current_user.stdout }} shell=/bin/zsh
   when: shell_used.stdout != "/bin/zsh"
 
+- name: zsh config file
+  copy: src=zshrc dest=~/.zshrc
+
+- name: Install oh my zsh
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh
+    dest=~/.oh-my-zsh
+
