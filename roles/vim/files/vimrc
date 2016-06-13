@@ -3,8 +3,8 @@
 "
 
 " Allow vim to break compatibility with vi
-set nocompatible " This must be first, because it changes other options
-filetype off                  " required
+set nocompatible        " This must be first, because it changes other options
+filetype off            " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -22,10 +22,15 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'scrooloose/syntastic'
 
+Plugin 'mattn/emmet-vim'
+
 Plugin 'bronson/vim-trailing-whitespace'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call vundle#end()           " required
+
+set autoindent
+filetype plugin indent on   " Reactivate file type detection
 
 
 "
@@ -49,9 +54,6 @@ set tabstop=4                   " Number of visual spaces per TAB
 set softtabstop=4               " Number of spaces in tab when editing
 set expandtab                   " Tabs are spaces
 set shiftwidth=4                " Number of columns for text indentation
-
-nmap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,eol:¬
 
 set showmatch                   " Highlight matching [{()}]
 

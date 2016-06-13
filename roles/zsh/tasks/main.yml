@@ -2,10 +2,26 @@
 
 - homebrew: name=zsh state=present update_homebrew=yes
 
-- name: Get the current users username
-  shell: whoami
-  register: current_user
+- name: Get current shell
+  shell: echo $SHELL
+  register: shell_used
   changed_when: False
 
-- name: Change the default shell to zsh for current user
-  user: name={{ current_user.stdout }} shell=/bin/zsh
+- block:
+  - name: Get username
+    shell: whoami
+    register: current_user
+    changed_when: False
+
+  - name: Change the default shell to zsh for current user
+    user: name={{ current_user.stdout }} shell=/bin/zsh
+  when: shell_used.stdout != "/bin/zsh"
+
+- name: zsh config file
+  copy: src=zshrc dest=~/.zshrc
+
+- name: Install oh my zsh
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh
+    dest=~/.oh-my-zsh
+

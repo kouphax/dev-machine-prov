@@ -1,4 +1,10 @@
 ---
 
-- homebrew: name=git state=present update_homebrew=yes
+- homebrew: name={{ item }} state=present update_homebrew=yes
+  with_items:
+    - git
+    - hub
+
+- name: Git config file
+  copy: src=gitconfig dest=~/.gitconfig
 
