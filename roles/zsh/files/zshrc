@@ -23,4 +23,7 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for all sessions
 export EDITOR='vim'
 
+# User aliases
+source $HOME/.aliases
+
 export PATH="/usr/local/sbin:$PATH"

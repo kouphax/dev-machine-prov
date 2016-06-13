@@ -17,6 +17,9 @@
     user: name={{ current_user.stdout }} shell=/bin/zsh
   when: shell_used.stdout != "/bin/zsh"
 
+- name: zsh aliases file
+  copy: src=aliases dest=~/.aliases
+
 - name: zsh config file
   copy: src=zshrc dest=~/.zshrc
 
