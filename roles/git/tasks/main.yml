@@ -6,5 +6,5 @@
     - hub
 
 - name: Git config file
-  copy: src=gitconfig dest=~/.gitconfig
+  template: src=gitconfig dest=~/.gitconfig
 

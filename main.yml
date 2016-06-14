@@ -7,3 +7,13 @@
   - tmux
   - vim
   - zsh
+
+  vars_prompt:
+
+    - name: "git_user_name"
+      prompt: "Enter your git user name"
+      private: no
+
+    - name: "git_user_email"
+      prompt: "Enter your git user email"
+      private: no
