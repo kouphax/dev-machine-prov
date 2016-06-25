@@ -5,6 +5,9 @@
     - git
     - hub
 
+- name: Git ignore file
+  copy: src=gitignore dest=~/.gitignore
+
 - name: Git config file
   template: src=gitconfig dest=~/.gitconfig
 
