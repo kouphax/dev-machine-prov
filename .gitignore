@@ -1,1 +1,5 @@
+# Vim swap files
 *.swp
+
+# Ansible json variables file
+variables.json
