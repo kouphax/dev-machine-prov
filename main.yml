@@ -12,8 +12,10 @@
       private: no
 
   roles:
+    - ack
     - apps
     - git
     - tmux
     - vim
     - zsh
+

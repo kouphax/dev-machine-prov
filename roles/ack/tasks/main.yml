@@ -1,0 +1,7 @@
+---
+
+- homebrew: name=ack state=present update_homebrew=yes
+
+- name: Ack config file
+  copy: src=ackrc dest=~/.ackrc force=yes
+
