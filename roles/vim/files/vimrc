@@ -66,6 +66,13 @@ set history=3000                " Extends the remembered commands
 
 
 "
+" Plugin settings
+"
+
+let NERDTreeIgnore = ['\.pyc$']
+
+
+"
 " Leader shortcuts
 "
 
