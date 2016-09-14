@@ -69,14 +69,22 @@ set history=3000                " Extends the remembered commands
 " Leader shortcuts
 "
 
-map <Leader>w :w<CR>                " Save file
-map <Leader>x :x<CR>                " Save file and exit
+" Save file
+nnoremap <Leader>w :w<CR>
+
+" Save file and exit
+nnoremap <Leader>x :x<CR>
 
 "
 " Plugin settings
 "
 
-map <Leader>o :CtrlP<CR>            " Open CtrlP
-map <Leader>n :NERDTreeToggle<CR>   " Toggle NERDTree filesystem tree split
-map <Leader>wf :FixWhitespace<CR>   " Remove trailling whitespace
+" Open CtrlP
+nnoremap <Leader>o :CtrlP<CR>
+
+" Toggle NERDTree filesystem tree split
+nnoremap <Leader>n :NERDTreeToggle<CR>
+
+" Remove trailling whitespace
+nnoremap <Leader>fw :FixWhitespace<CR>
 
