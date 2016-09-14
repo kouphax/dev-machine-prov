@@ -25,7 +25,7 @@
   osx_defaults: domain=com.apple.dock key=autohide type=bool value=true
 
 - name: "Dock: set the icon size of Dock items to 36 pixels"
-  osx_defaults: domain=com.apple.dock key=tilesize type=int value=36
+  osx_defaults: domain=com.apple.dock key=tilesize type=float value=36
 
 # Hot corners
 # Possible values:
