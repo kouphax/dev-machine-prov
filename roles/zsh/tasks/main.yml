@@ -15,6 +15,7 @@
 
   - name: Change the default shell to zsh for current user
     user: name={{ current_user.stdout }} shell=/bin/zsh
+    become: true
   when: shell_used.stdout != "/bin/zsh"
 
 - name: zsh aliases file
