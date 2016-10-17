@@ -40,7 +40,13 @@ filetype plugin indent on   " Reactivate file type detection
 set encoding=utf-8              " The encoding displayed.
 syntax enable                   " Syntax highlighting
 set background=light            " Change color scheme variation
-colorscheme solarized           " Change vim color scheme
+
+" Change vim color scheme
+try
+    colorscheme solarized
+catch
+    colorscheme peachpuff
+endtry
 
 let mapleader="\<Space>"        " Leader key is comma
 
