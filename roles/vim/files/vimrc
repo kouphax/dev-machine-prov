@@ -48,6 +48,7 @@ catch
     colorscheme peachpuff
 endtry
 
+set backspace=indent,eol,start  " Make backspace work as expected
 let mapleader="\<Space>"        " Leader key is comma
 
 set clipboard=unnamed           " Use system clipboard
