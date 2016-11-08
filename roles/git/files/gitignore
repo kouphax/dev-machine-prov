@@ -7,3 +7,6 @@
 # Folder view configuration files
 .DS_Store
 
+# JetBrains IDEs config folders
+.idea/
+
