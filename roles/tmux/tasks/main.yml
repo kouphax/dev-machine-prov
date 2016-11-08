@@ -2,6 +2,9 @@
 
 - homebrew: name=tmux state=present update_homebrew=yes
 
+# Needed to make copy-paste functionality work on macOS Sierra
+- homebrew: name=reattach-to-user-namespace state=present update_homebrew=yes
+
 - name: Tmux config file
   copy: src=tmux.conf dest=~/.tmux.conf force=yes
   register: tmux_conf_loaded
