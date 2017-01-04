@@ -12,9 +12,9 @@
       private: no
 
   roles:
-    - ack
     - apps
     - git
+    - the_silver_searcher
     - tmux
     - vim
     - zsh
