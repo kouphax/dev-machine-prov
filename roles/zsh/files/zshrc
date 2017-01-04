@@ -27,3 +27,7 @@ export EDITOR='vim'
 source $HOME/.aliases
 
 export PATH="/usr/local/sbin:$PATH"
+
+if [ -f ~/.zsh_local ]; then
+    source ~/.zsh_local
+fi
