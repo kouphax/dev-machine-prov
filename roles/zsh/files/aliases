@@ -1,3 +1,6 @@
+# Bash
+alias c="clear"
+
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -5,11 +8,11 @@ alias p="cd ~/Projects"
 
 
 # Docker
-alias docker-stop=’docker stop $(docker ps -a -q)’
-alias docker-rm=’docker rm $(docker ps -a -q)’
-alias docker-ps-clean=’docker-stop && docker-rm’
+alias docker-stop="docker stop $(docker ps -a -q)"
+alias docker-rm="docker rm $(docker ps -a -q)"
+alias docker-ps-clean="docker-stop && docker-rm"
 
-alias docker-rmi=’docker rmi $(docker images -a -q)’
-alias docker-clean-images=’docker rmi $(docker images -a | grep none | awk ‘{print $3}’)’
+alias docker-rmi="docker rmi $(docker images -a -q)"
+alias docker-clean-images="docker rmi $(docker images -a | grep none | awk '{print $3}')"
 
-alias compose=’docker-compose’
+alias compose="docker-compose"
