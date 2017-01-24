@@ -14,12 +14,3 @@
   shell: vim +PluginInstall +qall
   when: vimrc_loaded.changed
 
-- name: Create ftplugin directory
-  file: path=~/.vim/plugin/ftlplugin/ state=directory mode=0755
-
-- name: Copy ftplugin files
-  copy: src=ftplugin/{{ item }} dest=~/.vim/plugin/ftlplugin/{{ item }} force=yes
-  with_items:
-    - javascript.vim
-    - yaml.vim
-

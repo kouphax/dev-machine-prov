@@ -75,6 +75,18 @@ set history=3000                " Extends the remembered commands
 
 
 "
+" File indentation
+"
+au BufNewFile,BufRead *.yaml.*      set filetype=yaml
+au BufNewFile,BufRead *.yaml        set filetype=yaml
+au BufNewFile,BufRead *.yml.*       set filetype=yaml
+au BufNewFile,BufRead *.yml         set filetype=yaml
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
+
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
+
+"
 " Plugin settings
 "
 
