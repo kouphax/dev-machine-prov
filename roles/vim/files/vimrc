@@ -9,27 +9,23 @@ filetype off            " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.vim/plugged')
 
-" Let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'altercation/vim-colors-solarized'
 
-Plugin 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plug 'bronson/vim-trailing-whitespace', { 'on': 'FixWhitespace' }
 
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
-Plugin 'mattn/emmet-vim'
+Plug 'christoomey/vim-tmux-navigator'
 
-Plugin 'bronson/vim-trailing-whitespace'
-
-Plugin 'christoomey/vim-tmux-navigator'
-
-" All of your Plugins must be added before the following line
-call vundle#end()           " required
+" Initialize plugin system
+call plug#end()
 
 set autoindent
 filetype plugin indent on   " Reactivate file type detection
@@ -44,11 +40,7 @@ syntax enable                   " Syntax highlighting
 set background=light            " Change color scheme variation
 
 " Change vim color scheme
-try
-    colorscheme solarized
-catch
-    colorscheme peachpuff
-endtry
+silent! colorscheme solarized
 
 set backspace=indent,eol,start  " Make backspace work as expected
 let mapleader="\<Space>"        " Leader key is comma
@@ -115,4 +107,14 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Remove trailling whitespace
 nnoremap <Leader>fw :FixWhitespace<CR>
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
 
