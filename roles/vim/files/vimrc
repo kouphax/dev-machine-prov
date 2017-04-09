@@ -65,6 +65,8 @@ set hlsearch                    " Activate search hilighting
 
 set history=3000                " Extends the remembered commands
 
+set swapfile
+set dir=~/tmp
 
 "
 " File indentation
