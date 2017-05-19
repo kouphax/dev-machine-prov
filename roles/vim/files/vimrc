@@ -20,8 +20,6 @@ Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 
 Plug 'bronson/vim-trailing-whitespace', { 'on': 'FixWhitespace' }
 
-Plug 'scrooloose/syntastic'
-
 Plug 'christoomey/vim-tmux-navigator'
 
 " Initialize plugin system
