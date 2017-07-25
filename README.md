@@ -6,7 +6,7 @@ Repository with desired applications and settings, to setup a new machine, and a
 
 When using this on a new machine for the first time, install the required software to use ansible. Run:
 
-    `make setup`
+    make setup
 
 ## Provision
 
@@ -14,4 +14,4 @@ Remember to change variables in the `variables.json` file.
 
 If you want to run the ansible playbook, run:
 
-    `make`
+    make
