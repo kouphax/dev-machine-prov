@@ -1,4 +1,4 @@
-# Machine provisioning (macOS)
+# Development machine provisioning (macOS)
 
 Repository with desired applications and settings, to setup a new machine, and also, to keep multiple machines in sync with changes. 
 
