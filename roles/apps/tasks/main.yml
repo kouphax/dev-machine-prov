@@ -15,7 +15,6 @@
 
   - virtualbox
   - vagrant
-  - docker
 
   - evernote
   - sketch
@@ -23,3 +22,7 @@
   - slack
   - spotify
 
+
+- homebrew_cask: name={{ item }} state=absent
+  with_items:
+  - docker
