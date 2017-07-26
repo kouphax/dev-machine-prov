@@ -1,6 +1,6 @@
 ---
 
-- homebrew: name={{ item }} state=present update_homebrew=yes
+- homebrew: name={{ item }} state=absent update_homebrew=yes
   with_items:
   - docker
   - docker-machine
