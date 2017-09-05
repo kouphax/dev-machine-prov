@@ -16,6 +16,7 @@
 - block:
   - name: Source tmux config file
     shell: tmux source-file ~/.tmux.conf
+    ignore_errors: yes
 
   - name: Install tmux plugins
     shell: ~/.tmux/plugins/tpm/bin/install_plugins
