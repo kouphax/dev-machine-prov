@@ -35,7 +35,7 @@ filetype plugin indent on   " Reactivate file type detection
 
 set encoding=utf-8              " The encoding displayed.
 syntax enable                   " Syntax highlighting
-set background=light            " Change color scheme variation
+set background=dark            " Change color scheme variation
 
 " Change vim color scheme
 silent! colorscheme solarized
