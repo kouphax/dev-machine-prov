@@ -4,7 +4,7 @@
   osx_defaults: domain=com.apple.menuextra.battery key=ShowPercent type=string value="YES"
 
 - name: "Trackpad: enable tap to click for this user"
-  osx_defaults: domain=com.apple.AppleMultitouchTrackpad key=Clicking type=int value=1
+  osx_defaults: domain=com.apple.AppleMultitouchTrackpad key=Clicking type=bool value=true
 
 - name: "Trackpad: three finger drag"
   osx_defaults: domain=com.apple.AppleMultitouchTrackpad key=TrackpadThreeFingerDrag type=bool value=true
