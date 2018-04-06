@@ -16,6 +16,7 @@ Plug 'altercation/vim-colors-solarized'
 
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 
 Plug 'bronson/vim-trailing-whitespace', { 'on': 'FixWhitespace' }
@@ -119,6 +120,9 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 " Remove trailling whitespace
 nnoremap <Leader>fw :FixWhitespace<CR>
 
+" Ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -127,5 +131,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
