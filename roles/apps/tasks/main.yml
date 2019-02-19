@@ -25,7 +25,6 @@
     - caffeine
     - bettertouchtool
     - vagrant
-    - onenote
 
 - name: Ensure MAS is installed.
   homebrew: name=mas state=present
@@ -42,7 +41,3 @@
     - { id: 441258766, name: "Magnet (2.4)" }
     - { id: 497799835, name: "Xcode (10.0)" }
   when: (item.id | default(item) | string) not in mas_list.stdout
-
-- name: Upgrade all apps (if configured).
-  command: mas upgrade
-  when: mas_upgrade_all_apps
