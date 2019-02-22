@@ -108,6 +108,9 @@ nnoremap <Leader>w :w<CR>
 " Save file and exit
 nnoremap <Leader>x :x<CR>
 
+" Exit file
+nnoremap <Leader>q :q<CR>
+
 "
 " Plugin settings
 "
