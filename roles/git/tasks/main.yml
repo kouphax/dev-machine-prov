@@ -1,9 +1,9 @@
 ---
 
-- homebrew: name={{ item }} state=present update_homebrew=yes
-  with_items:
-    - git
-    - hub
+- homebrew:
+    name: ['git', 'hub']
+    state: present
+    update_homebrew: yes
 
 - name: Git ignore file
   copy: src=gitignore dest=~/.gitignore
