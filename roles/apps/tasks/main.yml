@@ -14,7 +14,6 @@
 
     - sketch
     - spotify
-    - evernote
 
     - whatsapp
     - skype
@@ -25,6 +24,8 @@
     - caffeine
     - bettertouchtool
     - vagrant
+    - evernote
+
 
 - name: Ensure MAS is installed.
   homebrew: name=mas state=present
