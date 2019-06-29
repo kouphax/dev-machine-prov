@@ -19,7 +19,7 @@
   - name: Change the default shell to zsh for current user
     user: name={{ current_user.stdout }} shell={{ shell_path }}
     become: true
-  when: shell_used.stdout != "{{ shell_path }}"
+  when: shell_used.stdout != shell_path
 
 - name: zsh aliases file
   copy: src=aliases dest=~/.aliases
